@@ -1,6 +1,7 @@
 Backendless.initApp("0B5B881C-AB5A-D7C5-FF52-297088A1FC00","9507AC93-13CF-F45F-FFA2-0DEF6F8E8F00");
 
 var destinationType; //used sets what should be returned (image date OR file path to image for example)
+document.addEventListener("deviceready",onDeviceReady,false);
 
 $(document).on("pageshow","#todopage", onPageShow);
 function onPageShow() {
@@ -73,12 +74,7 @@ function error(err) {
 }
 
 
-document.addEventListener("deviceready",onDeviceReady,false);
 
-function submitText() {
-	var text = $('#textinput').val();
-	alert(text);
-} 
 
 function onDeviceReady() {
 	destinationType=navigator.camera.DestinationType;
