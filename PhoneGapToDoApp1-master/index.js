@@ -39,7 +39,11 @@ function  processResults(tasks) {
     
     //add each tasks
     for (var i = 0; i < tasks.length; i++) { 
-        $("#taskList").append("<li><a href id="+ tasks[i].objectId +">"+tasks[i].Task+ "</a><a href='#' id="+ tasks[i].objectId +" class='delete'>delete</a> </li>");
+    
+        
+        $("#taskList").append(
+            "<li><a href id="+ tasks[i].objectId +">"+tasks[i].Task+ "</a> <a href='#infopage' id="+ tasks[i].objectId +" ></a> </li>");
+    
     }
     
     //refresh the listview
@@ -72,9 +76,6 @@ function  processResults(tasks) {
 function error(err) {
     alert(err);
 }
-
-
-
 
 function onDeviceReady() {
 	destinationType=navigator.camera.DestinationType;
